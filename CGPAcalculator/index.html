@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CGPA calculator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>CGPA CALCULATOR</h1>
+        <div class="fields-container">
+        <ul class="fields">
+            <li><input class="subject ins" type="text" placeholder="course code"></li>
+            <li><select class="ins" name="grade" id="grade">
+                    <option value="10.00">O</option>
+                    <option value="9.00">A+</option>
+                    <option value="8.00">A</option>
+                    <option value="7.00">B+</option>
+                    <option value="6.00">B</option>
+                    <option value="0.00">U</option>
+                </select></li>
+            <li><input class="credits ins" type="number" placeholder="Credits"></li>
+            <li class="dlt"><button class="dlt-btn">X</button></li>
+        </ul>
+        <ul class="fields">
+            <li><input class="subject ins" type="text" placeholder="course code"></li>
+            <li><select class="ins" name="grade" id="grade">
+                <option value="10.00">O</option>
+                <option value="9.00">A+</option>
+                <option value="8.00">A</option>
+                <option value="7.00">B+</option>
+                <option value="6.00">B</option>
+                <option value="0.00">U</option>
+                </select></li>
+            <li><input class="credits ins" type="number" placeholder="Credits"></li>
+            <li class="dlt"><button class="dlt-btn">X</button></li>
+        </ul>
+    </div>
+        <div class="foot">
+        <button class="btn-add btn">ADD SUBJECT</button>
+        <h2>Your CGPA: <span class="cg">0.00<span></h2>
+    </div>
+        <div class="rule"></div>
+        <button class="calculate btn">GET CGPA</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

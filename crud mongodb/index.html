@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Report</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300..700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url("https://images.unsplash.com/photo-1557682224-5b8590cd9ec5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1350&q=80");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding: 10px;
+}
+
+.wrapper {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 20px 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    color: #fff;
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+}
+
+.wrapper h1 {
+    margin-bottom: 1.5rem;
+    font-size: 2.5rem;
+    color: #ff9f00;
+}
+
+.input-box {
+    position: relative;
+    margin: 1.5rem 0;
+}
+
+.input-box input {
+    width: 100%;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    color: #333;
+}
+
+.input-box input::placeholder {
+    color: #aaa;
+}
+
+.input-box input:focus {
+    border: 2px solid #ff9f00;
+    outline: none;
+}
+
+.btn {
+    width: 100%;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #ff9f00;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 1rem;
+}
+
+.btn:hover {
+    background-color: #ff7f00;
+}
+
+.btn a {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+}
+
+.btn a:hover {
+    text-decoration: underline;
+}
+
+.register-link {
+    margin-top: 1rem;
+    font-size: 1rem;
+    color: #ff9f00;
+}
+
+.register-link p a {
+    color: #ff9f00;
+    font-weight: 700;
+}
+
+.register-link p a:hover {
+    text-decoration: underline;
+}
+</style>
+</head>
+<body>
+    <div class="wrapper">
+        <form action="/insert" method="post">
+            <h1>Details</h1>
+            <div class="input-box">
+                <input type="text" placeholder="Name" required name="name">
+            </div>
+            <div class="input-box">
+                <input type="number" placeholder="Mobile No" required min="0" max="9999999999" maxlength="10" name="num">
+            </div>
+            <div class="input-box">
+                <input type="email" placeholder="Email" name="mail" required>
+            </div>
+            <button type="submit" class="btn">Insert</button>
+            <button type="button" class="btn"><a href="/report">Report</a></button>
+        </form>
+    </div>
+</body>
+</html>

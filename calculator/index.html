@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator App</title>
+</head>
+
+<body>
+    <h1>Calculator</h1>
+    <form id="calculatorForm">
+        <label for="num1">Number 1:</label>
+        <input type="number" id="num1" name="num1" required><br><br>
+
+        <label for="num2">Number 2:</label>
+        <input type="number" id="num2" name="num2" required><br><br>
+
+        <label for="operation">Choose an Operation:</label>
+        <select id="operation" name="operation">
+            <option value="addition">Addition</option>
+            <option value="subtraction">Subtraction</option>
+            <option value="multiplication">Multiplication</option>
+            <option value="division">Division</option>
+        </select><br><br>
+
+        <input type="submit" value="Calculate">
+    </form>
+
+    <div id="result"></div>
+
+    <script>
+        document.getElementById('calculatorForm').addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            const num1 = parseFloat(document.getElementById('num1').value);
+            const num2 = parseFloat(document.getElementById('num2').value);
+            const operation = document.getElementById('operation').value;
+
+            fetch('http://localhost:3000/calculate', { // Update URL here
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ num1, num2, operation })
+            })
+                .then(response => response.json())
+                .then(data => {
+                    document.getElementById('result').innerText = `Result: ${data.result}`;
+                })
+                .catch(error => console.error('Error:', error));
+        });
+
+    </script>
+</body>
+
+</html>

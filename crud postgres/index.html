@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Report</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+        }
+
+        .wrapper {
+            background: rgba(255, 255, 255, 0.8);
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            border-radius: 8px;
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .wrapper h1 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .input-box {
+            margin-bottom: 15px;
+        }
+
+        .input-box input {
+            width: calc(100% - 20px);
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            background: #fff;
+            color: #333;
+            font-size: 1rem;
+            outline: none;
+        }
+
+        .input-box input::placeholder {
+            color: #aaa;
+        }
+
+        .btn {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            background: #007bff;
+            color: #fff;
+            font-size: 1rem;
+            cursor: pointer;
+            margin-bottom: 10px;
+            transition: background-color 0.3s;
+        }
+
+        .btn:hover {
+            background: #0056b3;
+        }
+
+        .btn a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .register-link {
+            margin-top: 10px;
+            color: #333;
+        }
+
+        .register-link p a {
+            color: #007bff;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .register-link p a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <form action="/insert" method="post">
+            <h1>Details</h1>
+            <div class="input-box">
+                <input type="text" placeholder="Name" required name="name">
+            </div>
+            <div class="input-box">
+                <input type="number" placeholder="Mobile No" required maxlength="10" name="num">
+            </div>
+            <div class="input-box">
+                <input type="email" placeholder="Email" name="mail" required>
+            </div>
+            <button type="submit" class="btn">Insert</button>
+            <button type="button" class="btn"><a href="/report">Report</a></button>
+        </form>
+    </div>
+</body>
+</html>
